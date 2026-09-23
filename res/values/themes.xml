@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Theme.FastTypeTrainer" parent="Theme.Material3.Light.NoActionBar">
+
+        <item name="android:fontFamily">sans</item>
+        <item name="android:colorAccent">@color/primary_blue</item>
+        <item name="android:navigationBarColor">@color/background_end</item>
+        <item name="android:statusBarColor">@color/background_start</item>
+        <item name="android:windowLightStatusBar">true</item>
+
+    </style>
+
+</resources>
