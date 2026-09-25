@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var editTextName: EditText
     private lateinit var spinnerPurpose: Spinner
     private lateinit var buttonStart: Button
-
+//drop down vlaues default
     private val purposeList = listOf(
         "Select your purpose",
         "Interview preparation",
@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity() {
             startPractice()
         }
     }
-
+//drop down 
     private fun setupPurposeSpinner() {
         val adapter = ArrayAdapter(
             this,
@@ -55,6 +55,7 @@ class MainActivity : AppCompatActivity() {
         spinnerPurpose.adapter = adapter
     }
 
+    //save
     private fun loadSavedUser() {
         val preferences = getSharedPreferences("fast_type_preferences", MODE_PRIVATE)
 
@@ -70,6 +71,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    //validation
     private fun startPractice() {
         val name = editTextName.text.toString().trim()
         val purpose = spinnerPurpose.selectedItem.toString()
