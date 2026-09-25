@@ -39,6 +39,8 @@ class PracticeActivity : AppCompatActivity() {
     private var timer: CountDownTimer? = null
     private var elapsedSeconds = 0L
 
+
+    //default list and count for text and level
     private val levels = listOf(
         TypingLevel(
             levelNumber = 1,
@@ -85,6 +87,7 @@ class PracticeActivity : AppCompatActivity() {
         showCurrentLevel()
     }
 
+    //id`s
     private fun initializeViews() {
         textViewGreeting = findViewById(R.id.textViewGreeting)
         textViewPurpose = findViewById(R.id.textViewPurpose)
@@ -123,6 +126,7 @@ class PracticeActivity : AppCompatActivity() {
         }
     }
 
+    //level update
     private fun showCurrentLevel() {
         timer?.cancel()
 
@@ -159,6 +163,7 @@ class PracticeActivity : AppCompatActivity() {
         }, 300)
     }
 
+    //count related work
     private fun startCountdown(seconds: Long) {
         timer = object : CountDownTimer(
             seconds * 1000L,
@@ -316,6 +321,7 @@ class PracticeActivity : AppCompatActivity() {
         }
     }
 
+    //popup after complete each level
     private fun finishLevel(timeExpired: Boolean) {
         if (levelFinished) {
             return
